@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo">
+
+    <ImageView
+        android:id="@+id/s_imgBg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/default_bg"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="183dp"
+        android:layout_marginTop="55dp"
+        android:src="@drawable/default_pre" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fastScrollEnabled="false"
+        android:background="@color/white"
+        android:layout_below="@id/s_imgBg">
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/s_list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20sp"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <com.example.myapplication.CustomRoundAngleImageView
+            android:id="@+id/status_id"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            roundiv:radius="25dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_bg"
+            android:layout_alignParentBottom="true">
+        </com.example.myapplication.CustomRoundAngleImageView>
+
+        <ImageView
+            android:id="@+id/prev_bm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="13dp"
+            android:src="@mipmap/ic_launcher">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prev_bm"
+            android:layout_marginLeft="60dp"
+            android:textColor="#99ffffff"
+            android:text="@string/default_time"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_below="@id/prev_bm"
+            android:layout_toRightOf="@id/tv_current_time"
+            android:textColor="#99ffffff"
+            android:text="00:00"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/s_Title"
+            android:layout_width="180dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/prev_bm"
+            android:layout_marginTop="33dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:shadowColor="#77000000"
+            android:shadowRadius="4"
+            android:text="这是一个很长的歌名"
+            android:textSize="18sp"
+            android:textColor="#eeffffff" />
+
+        <TextView
+            android:id="@+id/s_singerName"
+            android:shadowColor="#77000000"
+            android:layout_width="180dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/s_Title"
+            android:layout_toRightOf="@id/prev_bm"
+            android:shadowRadius="4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:text="歌手"
+            android:textSize="15sp"
+            android:textColor="#eeffffff" />
+
+        <SeekBar
+            android:id="@+id/sb_main_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50sp"
+            android:layout_marginRight="50sp"
+            android:layout_marginBottom="5dp"
+            android:maxHeight="2dp"
+            android:thumb="@null" />
+
+        <ImageView
+            android:id="@+id/s_last"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100sp"
+            android:layout_marginTop="55sp"
+            android:src="@mipmap/s_last" />
+
+        <ImageView
+            android:id="@+id/s_play"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="65sp"
+            android:layout_marginTop="50sp"
+            android:src="@mipmap/s_play" />
+
+        <ImageView
+            android:id="@+id/s_next"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="38sp"
+            android:layout_marginTop="55sp"
+            android:src="@mipmap/s_next" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
